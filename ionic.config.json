@@ -1,0 +1,7 @@
+{
+  "name": "appcep",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

@@ -1,0 +1,49 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Listar CEPs</ion-title>
+  </ion-navbar>
+
+</ion-header>
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-input type="text" maxlength="2" [(ngModel)]="txtUf" placeholder="Estado" autofocus></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="txtCidade" placeholder="Cidade" autofocus></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="txtLogradouro" placeholder="Logradouro" autofocus></ion-input>
+      <button ion-button color="dark" clear icon-only item-right (click)="listaEnderecos()">
+        <ion-icon name='search' is-active="false"></ion-icon>
+      </button>
+    </ion-item>
+  </ion-list>
+
+  <ion-list-header>
+    Enderço
+  </ion-list-header>
+  <ion-list no-border>
+    <ion-item>
+      <ion-icon name='planet' item-start></ion-icon>
+      Logradouro
+      <ion-note color="primary" item-end>{{ logradouro }}</ion-note>
+    </ion-item>
+    <ion-item>
+      <ion-icon name='planet' item-start></ion-icon>
+      Bairro
+      <ion-note color="primary" item-end>{{ bairro }}</ion-note>
+    </ion-item>
+    <ion-item>
+      <ion-icon name='planet' item-start></ion-icon>
+      Cidade
+      <ion-note color="primary" item-end>{{ cidade }}</ion-note>
+    </ion-item>
+    <ion-item>
+      <ion-icon name='planet' item-start></ion-icon>
+      Estado
+        <ion-note color="primary" item-end>{{ estado }}</ion-note>
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,37 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Localizar CEP</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+
+    <ion-item>
+      <ion-label fixed>CEP</ion-label>
+      <ion-input type="number" [(ngModel)]="cep" pattern="\d*" autofocus></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label fixed>Logradouro</ion-label>
+      <ion-input type="text" value={{logradouro}} readonly></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label fixed>Bairro</ion-label>
+      <ion-input type="text" value={{bairro}} readonly></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label fixed>Cidade</ion-label>
+      <ion-input type="text" value={{cidade}} readonly></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label fixed>Estado</ion-label>
+      <ion-input type="text" value={{estado}} readonly></ion-input>
+    </ion-item>
+  </ion-list>
+  <div padding>
+    <button ion-button color="primary" block (click) = "buscaEndereco()">Buscar</button>
+  </div>
+</ion-content>

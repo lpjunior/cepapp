@@ -1,0 +1,41 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>Endereço Icon List</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list no-border>
+
+    <ion-list-header>
+      Enderço
+    </ion-list-header>
+    <ion-item>
+      <ion-icon name='planet' item-start></ion-icon>
+      CEP
+      <ion-label fixed>CEP</ion-label>
+      <ion-input type="number" [(ngModel)]="cep" (keyup) ="autoPreenchimento()" autofocus></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-icon name='planet' item-start></ion-icon>
+      Logradouro
+      <ion-note color="primary" item-end>{{ logradouro }}</ion-note>
+    </ion-item>
+    <ion-item>
+      <ion-icon name='planet' item-start></ion-icon>
+      Bairro
+      <ion-note color="primary" item-end>{{ bairro }}</ion-note>
+    </ion-item>
+    <ion-item>
+      <ion-icon name='planet' item-start></ion-icon>
+      Cidade
+      <ion-note color="primary" item-end>{{ cidade }}</ion-note>
+    </ion-item>
+    <ion-item>
+      <ion-icon name='planet' item-start></ion-icon>
+      Estado
+        <ion-note color="primary" item-end>{{ estado }}</ion-note>
+    </ion-item>
+  </ion-list>
+</ion-content>
