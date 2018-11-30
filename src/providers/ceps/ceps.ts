@@ -14,7 +14,7 @@ export class CepsProvider {
   }
 
   // UF, Cidade e Logradouro
-  findCep(logradouro: string, cidade: string, estado: string) {
+  findCep(estado: string, cidade: string, logradouro: string) {
     return this.http.get(this.API_URL + estado + '/' + cidade + '/' + logradouro + '/json/');
   }
 }

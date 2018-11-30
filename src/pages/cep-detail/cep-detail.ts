@@ -23,11 +23,7 @@ export class CepDetailPage {
   private txtCidade:string;
   private txtUf:string;
 
-  cep:string;
-  logradouro:string;
-  bairro:string;
-  cidade:string;
-  estado:string;
+  enderecos = [];
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private cepsProvider: CepsProvider) {
   }
@@ -35,10 +31,11 @@ export class CepDetailPage {
   ionViewDidLoad() { }
 
   listaEnderecos() {
+    
     this.cepsProvider.findCep(this.txtUf, this.txtCidade, this.txtLogradouro).subscribe(
       data=>{
         const json = JSON.parse((data as any)._body);
-        return json;
+        this.enderecos = json;
       }, error=>{
         console.log(error);
       }

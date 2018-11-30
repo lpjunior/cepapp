@@ -22,28 +22,38 @@
   </ion-list>
 
   <ion-list-header>
-    Enderço
+    CEPs Encontrados
   </ion-list-header>
-  <ion-list no-border>
+  <ion-list no-border *ngFor="let endereco of enderecos">
     <ion-item>
       <ion-icon name='planet' item-start></ion-icon>
       Logradouro
-      <ion-note color="primary" item-end>{{ logradouro }}</ion-note>
+      <ion-note color="primary" item-end>{{ endereco.logradouro }}</ion-note>
     </ion-item>
     <ion-item>
       <ion-icon name='planet' item-start></ion-icon>
       Bairro
-      <ion-note color="primary" item-end>{{ bairro }}</ion-note>
+      <ion-note color="primary" item-end>{{ endereco.bairro }}</ion-note>
     </ion-item>
     <ion-item>
       <ion-icon name='planet' item-start></ion-icon>
       Cidade
-      <ion-note color="primary" item-end>{{ cidade }}</ion-note>
+      <ion-note color="primary" item-end>{{ endereco.localidade }}</ion-note>
     </ion-item>
     <ion-item>
       <ion-icon name='planet' item-start></ion-icon>
       Estado
-        <ion-note color="primary" item-end>{{ estado }}</ion-note>
+        <ion-note color="primary" item-end>{{ endereco.uf }}</ion-note>
+    </ion-item>
+    <ion-item>
+      <ion-icon name='planet' item-start></ion-icon>
+      Complemento
+        <ion-note color="primary" item-end>{{ endereco.complemento }}</ion-note>
+    </ion-item>
+    <ion-item>
+      <ion-icon name='planet' item-start></ion-icon>
+      IBGE
+        <ion-note color="primary" item-end>{{ endereco.ibge }}</ion-note>
     </ion-item>
   </ion-list>
 </ion-content>
